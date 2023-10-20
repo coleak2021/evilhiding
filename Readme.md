@@ -1,6 +1,6 @@
 # evilhiding
 
-shellcode loader,bypassav,免杀，一款基于python的shellcode免杀加载器
+shellcode loader,bypassav,免杀工具，一款基于python的shellcode免杀加载器
 
 ## 工具浅析
 
