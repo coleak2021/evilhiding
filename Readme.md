@@ -1,3 +1,7 @@
+# evilhiding
+
+shellcode loader,bypassav,免杀，一款基于python的shellcode免杀加载器
+
 ## 工具浅析
 
 - 远控条件触发防沙箱
@@ -39,15 +43,15 @@ dist目录下生成HipsMain.exe
 
 **过火绒**
 
-![image-20231019203001783](C:/Users/admin/AppData/Roaming/Typora/typora-user-images/image-20231019203001783.png)
+![](picture/image-20231019203001783.png)
 
 **过defender**
 
-![image-20231019204156899](C:/Users/admin/AppData/Roaming/Typora/typora-user-images/image-20231019204156899.png)
+![](picture/image-20231019204156899.png)
 
 **动态执行**
 
-![image-20231020182032610](C:/Users/admin/AppData/Roaming/Typora/typora-user-images/image-20231020182032610.png)
+![image-20231020182032610](picture/image-20231020182032610.png)
 
 
 
