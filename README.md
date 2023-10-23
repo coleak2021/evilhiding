@@ -2,6 +2,10 @@
 
 shellcode loader,bypassav,免杀工具，一款基于python的shellcode免杀加载器
 
+![image-20231018223810347](C:/Users/admin/AppData/Roaming/Typora/typora-user-images/image-20231018223810347.png)
+
+
+
 ## 工具浅析
 
 - 远控条件触发防沙箱
@@ -52,6 +56,12 @@ dist目录下生成HipsMain.exe
 **动态执行**
 
 ![image-20231020182032610](picture/image-20231020182032610.png)
+
+
+
+## 日志信息
+
+- 2023-10-23：360、火绒 动态静态均可过，windows defender静态可过
 
 
 
