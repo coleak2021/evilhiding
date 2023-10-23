@@ -2,7 +2,7 @@
 
 shellcode loader,bypassav,免杀工具，一款基于python的shellcode免杀加载器
 
-![image-20231018223810347](C:/Users/admin/AppData/Roaming/Typora/typora-user-images/image-20231018223810347.png)
+![image-20231018223810347](picture/image-20231018223810347.png)
 
 
 
