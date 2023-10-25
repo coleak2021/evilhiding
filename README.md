@@ -62,6 +62,7 @@ dist目录下生成HipsMain.exe
 ## 日志信息
 
 - 2023-10-23：360、火绒 动态静态均可过，windows defender静态可过
+- 2023-10-25：病毒库更新至最新的火绒和360动态可过，windows defender静态可过
 
 
 
